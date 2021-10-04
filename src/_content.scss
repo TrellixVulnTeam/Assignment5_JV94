@@ -1,0 +1,80 @@
+#headline {
+    @include width_height(100%, 130px);
+    background: $headlinecl;
+    text-align: center;
+    margin: 0 auto;
+
+    h1{
+        color:$white;
+        @include fs_fw_pt(2.5em, 100, 50px);
+      
+        @include break(767px){
+            @include fs_fw_pt(2em,null,50px);
+            
+        }
+        @include break(459px){
+            @include fs_fw_pt(1.5em, null, 30px);
+            
+        }
+
+    }
+}
+
+#content {
+    @include width_height(940px, null);
+    margin: 20px auto;
+
+   
+
+    h3{
+
+        color: $gray;
+        @include fs_fw_pt(2em, 400, null);
+        
+        @include break(459px){
+font-size: 1.6em;
+        }
+    }
+    #products{
+        @include width_height(460px, null);
+        float: left;
+    }
+
+    #products img{
+        float: left;
+        margin-right: 20px;
+    }
+    #products article{
+        margin-bottom: 40px;
+    }
+    #products h4{
+        line-height: 1em;
+
+    }
+    #testimonials {
+        @include width_height(460px, null);
+        float: right;
+    }
+    #products, #testimonials{
+        @include break(959px){
+            @include width_height (46%, null);
+            margin: 0 2%;
+        }
+        @include break(757px){
+            @include width_height(96%, null);
+            margin: 0 2%;
+            float: none;
+        }
+    }
+}
+.greybar{
+    @include width_height(100%, 90px);
+    background: $graybarcl;
+    clear: both;
+    padding-top: 30px;
+}
+@include break(459px){
+    .greybar, article img{
+        display: none;
+    }
+}

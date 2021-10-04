@@ -1,0 +1,64 @@
+figure{
+    @include nav(left, 400px, 190px);
+    background: url($lgImg) no-repeat 0 50px; ;
+    display: block;
+    margin: 0;
+    @include break(959px){
+    @include nav (none, inherit, 140px);
+    background-position: center;
+}
+ @include break(459px){
+     background-size: contain;
+     height: 100px;
+ }
+}
+    nav{
+        @include nav(left, 540px, 190px);
+        text-align: right;
+
+        @include break(959px){
+            @include nav(none,inherit, 50px);
+            text-align: center;
+        }
+        @include break(459px){
+            margin-bottom: 40px !important;
+        }
+       
+
+        ul{
+            list-style-type: none;
+            margin-top: 95px;
+            @include break(959px){
+                margin-top: 0;
+            }
+        
+            li{
+                display: inline;
+                font-size: 0.8em;
+                margin-right: 10px;
+
+                a{
+                    color: #E65C43;
+                text-decoration: none;
+                letter-spacing: -0.01em;
+                &:hover {color:$white;}
+                }
+
+
+                @include break(959px){
+                    font-size: 1em;
+                    margin: 0 10px;
+                }
+                @include break(767px){
+                    font-size: 0.8em;
+                     margin: 0 5px;
+                }
+
+        
+            }
+        }
+ 
+
+    }
+
+

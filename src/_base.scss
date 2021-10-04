@@ -1,0 +1,22 @@
+body{
+    font-family: $body_font;
+    font-size: 1em;
+    line-height: 2em;
+    margin: 0;
+    background:url($bgImg) $white repeat-x ;
+}
+
+main{
+    @include width_height(940px, null);
+    margin: 0 auto;
+    padding: 0 10px;
+    @include break(959px){
+        @include width_height(768px, null);
+    }
+    @include break(767px){
+        @include width_height(460px, null);
+    }
+    @include break(459px){
+        @include width_height(300px, null);
+    }
+}

@@ -1,0 +1,39 @@
+
+footer{
+    @include width_height(100%, 120px);
+    background: $gray;
+    text-align: center;
+    color: $white;
+    padding-top: 50px;
+
+    @include break(459px){
+        text-align: center;
+   
+
+    p, img {
+        float: none;
+        margin: 0;
+    }
+}
+}
+
+.social-media{
+    margin: 0 auto;
+    @include width_height(165, null);
+
+    div {
+        float: left;
+        margin-right: 5px;
+    }
+    a{
+        display: block;
+        @include width_height(36px, 36px);
+        text-indent: -9999px;
+    }
+    @for $item from 1 through 4 {
+        div:nth-child(#{$item}) {
+            background:url($smImg)  ($item - 1)*-38px 0;
+        }
+}
+}
+
